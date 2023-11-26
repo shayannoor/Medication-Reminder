@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medication Reminder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="medContainers">
+    <h1>Medication Reminder</h1>
+    <form id="medForm">
+      <label for="medName">Medication Name:</label>
+      <input type="text" id="medName" required placeholder="Medicine Name"><br><br>
+
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" multiple><br><br>
+
+      <label for="frequency">Frequency:</label>
+      <select id="frequency">
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="weekly">Monthly</option>
+        
+      </select><br><br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date"><br><br>
+
+   
+
+    <label for="reminderAudio">Reminder Sound:</label>
+    <select id="reminderAudio" id="frequency" class="dropdown-style">
+    <option value="alarm1.mp3">Alarm 1</option>
+    <option value="alarm2.mp3">Alarm 2</option>
+    <option value="alarm3.mp3">Alarm 3</option>
+    
+    </select><br><br>
+
+
+    <input type="submit" value="Set Reminder" class="submit-style">
+    </form>
+    <button id="addMedicationBtn" class="button-style">Add Medication</button>
+  </div>
+
+
+  
+
+  
+
+  <!--  JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    flatpickr("#dates", {
+      mode: "multiple",
+      dateFormat: "Y-m-d"
+    });
+  </script>
+</body>
+</html>
